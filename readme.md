@@ -27,5 +27,5 @@ OUTPUT_DATA_DIR=path_to_output_folder_on_your_system
 - Step 2: Run `initialize_project.sh`
 - Step 3: Copy downloaded files under public directory.
 - Step 4: TODO: Activate r conda environment.
-- Step 5: Run `run_this.R`
+- Step 5: Navigate to the code folder and run `run_this.R`
 
