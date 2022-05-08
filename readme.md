@@ -1,7 +1,6 @@
-# Computational Workflow in R
-## Case Study: Synthetic Medicare Data for Environmental Health Studies
+# Synthetic Medicare Data for Environmental Health Studies
 
-Author: Naeem Khoshnevis
+Author: Naeem Khoshnevis, Xiao Wu, Danielle Braun
 
 ## Summary
 
@@ -13,7 +12,16 @@ In this workflow, we generate public data sets for benchmarking and illustration
 
 ## Set up project environment
 
-In order to be able to reproduce the results. You need to download raw data. All data are open to the public. The raw data is large (> 7 GB), as a result we seperate code and data. Input files are shared [here](https://drive.google.com/drive/folders/1t8x0hQ_oHuuXV_Hr-1l9jpjjaWcry2qw?usp=sharing) for direct download. There are several helper functions and codes to setup the environmental path on your system (Windows is not tested.). Please note that this is different than processing environment. 
+To be able to reproduce the results. You need to download raw data. All data are open to the public. In the entire processing workflow, we keep data (input, output, and cache) and code in separate locations; this has several advantages, including:
+- Some input data has been used in several projects; as a result, separating the code and data helps us store the data once. 
+- Reduces the chance of submitting data into the version control system. 
+  - In the case of public data, this redundantly increases disk usage.
+  - In the case of private data, this increases the risk of a data breach. 
+- Helps the developers to manage disk spaces easily. For example, one can easily connect the project to an external disk space without changing a character in the code. The following figure shows the relation between the project and data. 
+
+<img src="figures/png/project_folder.png" width="1000">
+
+The raw data is large (> 7 GB), as a result we seperate code and data. Input files are shared [here](https://drive.google.com/drive/folders/1t8x0hQ_oHuuXV_Hr-1l9jpjjaWcry2qw?usp=sharing) for direct download. There are several helper functions and codes to setup the environmental path on your system (Windows is not tested.). Please note that this is different than processing environment. 
 
 - Step 1: Create a `project_path_info.md` file and add the following fields:
 
