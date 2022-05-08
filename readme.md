@@ -35,7 +35,7 @@ PROJECT_NAME=your_project_name
 PUBLIC_DATA_DIR=path_to_public_data_folder_on_your_system
 PRIVATE_DATA_DIR=path_to_private_data_folder_on_your_system
 OUTPUT_DATA_DIR=path_to_output_folder_on_your_system
-
+    
 ```
 Please note to include the last empty line. 
 
