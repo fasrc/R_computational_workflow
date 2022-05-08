@@ -1,6 +1,11 @@
+.Rhistory
 code/.Rhistory
+data/*
+output
 *.DS_Store
-code/synthetic_county_2008_2010_cache/
-code/synthetic_county_2008_2010_files/
+code/synthetic_county_2010_cache/
+code/synthetic_county_2010_files/
 study_data/*
+study_output/*
 project_path_info.md
+pr_hard_path_name.txt

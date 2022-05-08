@@ -1,6 +1,8 @@
 # Synthetic Medicare Data for Environmental Health Studies
 
-Author: Naeem Khoshnevis, Xiao Wu, Danielle Braun
+Authors: Naeem Khoshnevis, Xiao Wu, Danielle Braun
+Email: nkhoshnevis@g.harvard.edu
+Github: https://github.com/Naeemkh
 
 ## Summary
 
@@ -17,14 +19,14 @@ To be able to reproduce the results. You need to download raw data. All data are
 - Reduces the chance of submitting data into the version control system. 
   - In the case of public data, this redundantly increases disk usage.
   - In the case of private data, this increases the risk of a data breach. 
-- Helps the developers to manage disk spaces easily. For example, one can easily connect the project to an external disk space without changing a character in the code. The following figure shows the relation between the project and data. 
+- Helps the developers to manage disk spaces easily. For example, one can easily connect the project to an external disk space without changing a character in the code. The following figure shows the relation between the project and data folders. 
 
-<p align="center" width="80%">
-    <img width="80%" src="figures/png/project_folder.png">
+<p align="center" width="60%">
+    <img width="60%" src="figures/png/project_folder.png">
 </p>
 
 
-The raw data is large (> 7 GB), as a result we seperate code and data. Input files are shared [here](https://drive.google.com/drive/folders/1t8x0hQ_oHuuXV_Hr-1l9jpjjaWcry2qw?usp=sharing) for direct download. There are several helper functions and codes to setup the environmental path on your system (Windows is not tested.). Please note that this is different than processing environment. 
+Input files are shared [here](https://drive.google.com/drive/folders/1t8x0hQ_oHuuXV_Hr-1l9jpjjaWcry2qw?usp=sharing) for direct download. The following steps represent reproducing the results (Windows is not tested). 
 
 - Step 1: Create a `project_path_info.md` file and add the following fields:
 
@@ -33,10 +35,45 @@ PROJECT_NAME=your_project_name
 PUBLIC_DATA_DIR=path_to_public_data_folder_on_your_system
 PRIVATE_DATA_DIR=path_to_private_data_folder_on_your_system
 OUTPUT_DATA_DIR=path_to_output_folder_on_your_system
+
 ```
+Please note to include the last empty line. 
 
 - Step 2: Run `initialize_project.sh`
-- Step 3: Copy downloaded files under public directory.
-- Step 4: TODO: Activate r conda environment.
-- Step 5: Navigate to the code folder and run `run_this.R`
+- Step 3: Copy downloaded files into the public data directory.
+- Step 4: Create R conda environment.
+
+  ```s
+  conda env create -n r_env -f r_env.yaml
+  ```
+
+- Step 5: Activate R conda environment.
+
+  ```s
+  conda activate r_env
+  ```
+
+- Step 6: Run RStudio 
+
+  In my case, I am using a macOS and the Rstudio application is located in the following path.
+
+  ```s
+  /Applications/RStudio.app/Contents/MacOS/RStudio
+  ```
+- Step 7: Double-check if your conda path is all set.
+
+  Inside RStudio, run:
+
+  ```r
+  > R.home()
+  ```
+  [1] "/Users/[your username]/anaconda3/envs/r_env/lib/R"
+
+  ```r
+  > .libPaths()
+  ```
+  [1] "/Users/[your username]/anaconda3/envs/r_env/lib/R/library"
+
+- Step 8: Navigate to the code folder and run `synthetic_county_2010.Rmd`
+- Done!
 

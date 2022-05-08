@@ -65,10 +65,13 @@ fi
 if [ -d output ]
 then
      echo "output folder exists, removing old symbolic links (if any) ... "
-     rm output
+     rm -rf output
      echo "Done with removing old links for output folder."
 fi
 
+echo ${v[PUBLIC_DATA_DIR]}
+echo ${v[PRIVATE_DATA_DIR]}
+echo ${v[OUTPUT_DATA_DIR]}
 
 ln -s `echo ${v[PUBLIC_DATA_DIR]}` data/public
 ln -s `echo ${v[PRIVATE_DATA_DIR]}` data/private
