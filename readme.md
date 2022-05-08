@@ -19,7 +19,10 @@ To be able to reproduce the results. You need to download raw data. All data are
   - In the case of private data, this increases the risk of a data breach. 
 - Helps the developers to manage disk spaces easily. For example, one can easily connect the project to an external disk space without changing a character in the code. The following figure shows the relation between the project and data. 
 
-<img src="figures/png/project_folder.png" width="1000">
+<p align="center" width="80%">
+    <img width="80%" src="figures/png/project_folder.png">
+</p>
+
 
 The raw data is large (> 7 GB), as a result we seperate code and data. Input files are shared [here](https://drive.google.com/drive/folders/1t8x0hQ_oHuuXV_Hr-1l9jpjjaWcry2qw?usp=sharing) for direct download. There are several helper functions and codes to setup the environmental path on your system (Windows is not tested.). Please note that this is different than processing environment. 
 
