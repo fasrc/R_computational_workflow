@@ -1,8 +1,8 @@
 # Synthetic Medicare Data for Environmental Health Studies
 
-Authors: Naeem Khoshnevis, Xiao Wu, Danielle Braun
-Email: nkhoshnevis@g.harvard.edu
-Github: https://github.com/Naeemkh
+Authors: Naeem Khoshnevis, Xiao Wu, Danielle Braun   
+Email: nkhoshnevis@g.harvard.edu    
+Github: https://github.com/Naeemkh   
 
 ## Summary
 
