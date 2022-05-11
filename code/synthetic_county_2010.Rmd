@@ -839,4 +839,20 @@ write.csv(study_dataset,
           row.names = FALSE)
 ```
 
+## Check Results
+
+```{r, cache=TRUE}
+package_data <- read.csv("Study_dataset_2010_package_data.csv")
+
+col_names <- colnames(study_dataset)[unlist(lapply(study_dataset, is.numeric))]
+
+for (i in col_names){
+  print(paste("Data in column ", i, "are identical: ", all.equal(study_dataset[[i]], package_data[[i]])))
+}
+```
+
+```{r, cache=TRUE}
+sessionInfo()
+```
+
 # References
