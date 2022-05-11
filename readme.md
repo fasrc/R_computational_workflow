@@ -39,7 +39,7 @@ OUTPUT_DATA_DIR=path_to_output_folder_on_your_system
 ```
 Please note to include the last empty line. 
 
-- Step 2: Run `initialize_project.sh` (Windows users should manually create the soft links. See lines 76-78 of initialize_project.sh)
+- Step 2: Run `initialize_project.sh` (Windows users should skip this step and manually create the soft links. See lines 76-78 of initialize_project.sh)
 - Step 3: Copy downloaded files into the public data directory.
 - Step 4: Create R conda environment.
 
@@ -75,5 +75,8 @@ Please note to include the last empty line.
   [1] "/Users/[your username]/anaconda3/envs/r_env/lib/R/library"
 
 - Step 8: Navigate to the code folder and run `synthetic_county_2010.Rmd`
+
+- Step 9: A `Study_dataset_2010.csv` file will be created in the `output/results` folder. 
+
 - Done!
 

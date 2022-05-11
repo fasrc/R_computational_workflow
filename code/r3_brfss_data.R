@@ -45,6 +45,7 @@ brfss_data_2010_merged <- data.frame(
                           "cdc_pct_fmsmoker", "cdc_pct_nvsmoker", 
                           "cdc_pct_nnsmoker")])
 
+set.seed(982)
 brfss_data_2010_merged <- impute_cdc(
   data = brfss_data_2010_merged,
   param_list = c("cdc_mean_bmi", "cdc_pct_cusmoker", 
