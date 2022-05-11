@@ -39,7 +39,7 @@ OUTPUT_DATA_DIR=path_to_output_folder_on_your_system
 ```
 Please note to include the last empty line. 
 
-- Step 2: Run `initialize_project.sh`
+- Step 2: Run `initialize_project.sh` (Windows users should manually create the soft links. See lines 76-78 of initialize_project.sh)
 - Step 3: Copy downloaded files into the public data directory.
 - Step 4: Create R conda environment.
 
