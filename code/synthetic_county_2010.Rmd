@@ -72,6 +72,7 @@ library(lubridate)
 library(data.table)
 
 # Setting up environment and helper functions
+set.seed(3487)
 source("setup_env_vals.R")
 source("r0_utility_functions.R")
 ```
@@ -423,6 +424,7 @@ brfss_data <- data.frame(
 brfss_data$cdc_mean_bmi <- ifelse(brfss_data$cdc_mean_bmi == 9999, NA,
                                   brfss_data$cdc_mean_bmi)
 
+set.seed(982)
 brfss_data <- impute_cdc(
   data = brfss_data,
   param_list = c("cdc_mean_bmi", "cdc_pct_cusmoker", 
@@ -827,5 +829,14 @@ spplot(merged_obj, zcol = "region",
        main="Study Regions")
 ```
 
+## Write Data to the Disk
+
+```{r, cache=TRUE}
+
+study_dataset <- study_dataset[complete.cases(study_dataset[,c(1:3)]),]
+write.csv(study_dataset,
+          file.path(pr_results, "Study_dataset_2010.csv"),
+          row.names = FALSE)
+```
 
 # References
